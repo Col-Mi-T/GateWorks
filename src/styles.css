@@ -1,7 +1,6 @@
-
 :root {
   font-family:'Courier New', Courier, monospace;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: 800;
 
@@ -17,8 +16,13 @@
   user-select:none;
 
   --theme-bg:#004ba7;
-  --header-height:40px;
-  --taskbar-height:70px;
+  --theme-accent: #7eb7fc;
+  --header-height:30px;
+  --taskbar-height:50px;
+
+  --left-width: 20%;
+  --left-min-width: 10%;
+  --left-max-width: 60%;
 }
 
 html,body,*{
@@ -75,6 +79,16 @@ html,body,*{
   padding:0
 }
 
+#header li {
+  cursor: pointer;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+#header li:hover {
+  color: var(--theme-accent);
+  text-shadow: 0 0 8px var(--theme-accent), 0 0 18px var(--theme-accent);
+}
+
 #taskbar{
   background:var(--theme-bg);
   border-top:2px solid;
@@ -106,21 +120,42 @@ html,body,*{
 }
 
 #left {
+  display: flex;
   left: 0;
-  width: 20%;
-  border-right:2px solid;
+  width: var(--left-width);
   background: var(--theme-bg);
 }
 
 #right {
-  right: 0;
-  width: 80%;
+  left: var(--left-width);
+  right:0;
 }
 
 #left-content,
 #right-content {
   height: 100%;
+  width:100%;
   box-sizing: border-box;
   padding: 15px;
   overflow-y: auto;
+  overflow-x:hidden
+}
+
+#left-content{
+  display:flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#left-resizer{
+  border-left: 2px solid;
+  border-right: 2px solid;
+  width:5px;
+  background:var(--theme-accent);
+  cursor:ew-resize;
+  flex: 0 0 5px;
+  height: 100%;
+  touch-action: none;
 }
