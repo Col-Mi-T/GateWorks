@@ -17,7 +17,8 @@
         "minHeight": 400,
         "maxWidth": 1600,
         "maxHeight": 1000,
-        "resizable": true
+        "resizable": true,
+        "additionalBrowserArgs": "--disable-features=ElasticOverscroll,msWebOOUI,msPdfOOUI,msSmartScreenProtection"
       }
     ],
     "security": {
