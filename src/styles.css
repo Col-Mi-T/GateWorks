@@ -218,3 +218,18 @@ img{
   opacity: 0.5;
   pointer-events: none;
 }
+.logic-gate.active {
+  filter: drop-shadow(0 0 8px #00bfff);
+}
+
+.pin {
+  fill: #555;
+  stroke: #aaa;
+  stroke-width: 1.5;
+  cursor: crosshair;
+}
+
+.pin:hover {
+  fill: #00bfff;
+  filter: drop-shadow(0 0 5px #00bfff);
+}

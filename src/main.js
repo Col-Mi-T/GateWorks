@@ -286,6 +286,7 @@ workspace.addEventListener("pointerdown", (event) => {
 
     if (event.target.classList.contains("logic-gate")) {
       selectedGate = event.target;
+      selectedGate.classList.add("active")
 
       const point = workspace.createSVGPoint();
       point.x = event.clientX;
@@ -366,7 +367,8 @@ function dropDrag(event) {
   );
 
   selectedGate.setAttribute("x", cursor.x - grabOffset.x);
-selectedGate.setAttribute("y", cursor.y - grabOffset.y);
+  selectedGate.setAttribute("y", cursor.y - grabOffset.y);
+  selectedGate.classList.remove("active")
 
   workspace.appendChild(selectedGate);
   selectedGate = null;
