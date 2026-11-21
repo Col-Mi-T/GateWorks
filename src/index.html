@@ -10,7 +10,7 @@
 
   <body>
     <div id ="header">
-      <div>GateWorks</div>
+      <img id="header-logo" src="assets/tauri.svg" alt="Logo">
       <ul>
         <li id="file" class="header-item">File</li>
         <li id="edit" class="header-item">Edit</li>
@@ -27,28 +27,9 @@
     <div id="left">
       <div id="left-content">
         <H1>PANE</H1>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
-        <div>GateWorks</div>
+        <img id="orgate" class="gate" src="assets/gates/or.svg" draggable="false" data-gate="or">
+        <img id="andgate" class="gate" src="assets/gates/and.svg" draggable="false" data-gate="and">
+       
         <div>GateWorks</div>
         <div>GateWorks</div>
         <div>GateWorks</div>
@@ -73,17 +54,19 @@
     </div>
 
     <div id="right">
-      <div id="right-content">
+      <div id="right-content"> 
+
         <svg id="workspace">
-          <svg id="workspace">
-            <defs>
-              <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-                <path id="grid-lines" d="M 25 0 L 0 0 0 25" />
-              </pattern>
-            </defs>
-          
-            <rect id="grid-background" width="100%" height="100%" />  </svg>
+
+          <defs>
+            <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+              <path id="grid-lines" d="M 25 0 L 0 0 0 25" />
+            </pattern>
+          </defs>
+      
+          <rect id="grid-background" width="100%" height="100%" />
         </svg>
+
       </div>
     </div>
 
